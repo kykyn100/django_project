@@ -1,0 +1,9 @@
+<div class="header clearfix">
+    <a href="/" class="logo"></a>
+    <ul class="menu">
+        {% for link in menu_points %}
+            <li><a href="{{ link.menu_point }}" 
+                {% if request.path == link.menu_point %} class="active" {% endif %}
+                >{{ link.name }}</a></li>
+        {% endfor %}
+    </ul>
